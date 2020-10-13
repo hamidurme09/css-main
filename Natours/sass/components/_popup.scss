@@ -11,6 +11,19 @@
     opacity: 0;
     visibility: hidden;
 
+    //this property fully support now
+    // -webkit-backdrop-filter: blur(10px);
+    // -moz-backdrop-filter: blur(10px);
+    // backdrop-filter: blur(10px);
+
+    //any new property includ ruls which dosent support yet, like example
+    // @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    //     -webkit-backdrop-filter: blur(10px);
+    //     backdrop-filter: blur(10px);
+    //     background: rgba($color-black, .3);
+    // }
+
+
    
     &__content {
         position: absolute;
@@ -53,7 +66,11 @@
         column-gap: 4rem;
         column-rule: 1px solid $color-grey-light-2;
 
-        hyphens: auto;
+        // its not working
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+         hyphens: auto;
     }
 
     //open state
